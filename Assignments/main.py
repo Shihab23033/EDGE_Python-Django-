@@ -18,3 +18,5 @@ while True:
   print(a," * ", b," = ", c.mul(a, b))
  elif choice == 4:
   print(a," / ", b," = ", c.div(a, b))
+ else :
+  print("Invalid choice, please try again.")
