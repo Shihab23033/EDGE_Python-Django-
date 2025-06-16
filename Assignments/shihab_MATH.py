@@ -12,5 +12,5 @@ def print_pi_to_n_digits(n):
 if __name__ == "__main__":
     n = int(input("Enter the number of decimal places for pi: "))
     
-    pi_value = print_pi_to_n_digits(30)
+    pi_value = print_pi_to_n_digits(n)
     print(f"Pi to {n} decimal places: {pi_value}")

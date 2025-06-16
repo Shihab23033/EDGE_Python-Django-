@@ -10,14 +10,14 @@ class Graph:
         if v not in self.adj:
             self.adj[v] = []
         self.adj[u].append(v)
-        self.adj[v].append(u)  # Remove this line if graph is directed
+        self.adj[v].append(u)  
 
     def __getitem__(self, node):
         return self.adj.get(node, [])
 
 def shortest_path(graph, start, end):
     q = deque([start])
-    visited = {start: None}
+    visited = {start: None} #stores the parent of each node
     while q:
         current = q.popleft()
         if current == end:
@@ -25,7 +25,7 @@ def shortest_path(graph, start, end):
             while current is not None:
                 path.append(current)
                 current = visited[current]
-            return path[::-1]
+            return path[::-1] #reverse the path by slicing
         for neighbor in graph[current]:
             if neighbor not in visited:
                 visited[neighbor] = current
