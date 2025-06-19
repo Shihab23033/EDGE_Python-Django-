@@ -9,3 +9,5 @@ if num%10 == 0:
     print("Yes")
 else:
     print("No")
+
+# simplest way holo last digit check kora. last digit 0 hole yes either no
